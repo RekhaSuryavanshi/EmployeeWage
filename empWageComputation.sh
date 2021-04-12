@@ -3,6 +3,7 @@
 echo "welcome to EmployeeWage"
 
 IS_PRESENT=1
+EMP_RATE_PER_HR=20
 
 #variable
 check=$(( $RANDOM%2 ))
@@ -10,8 +11,8 @@ check=$(( $RANDOM%2 ))
 #condition
 if [ $check -eq $IS_PRESENT ]
 then
-        echo "employee is present"
+        empHrs=8
 else
-        echo "employee is absent"
+	 empHrs=0
 fi
-
+salary=$(( $EMP_RATE_PER_HR * $empHrs ))
